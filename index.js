@@ -11,7 +11,7 @@ const portValue = 4000;
 const __dirname = path.resolve();
 var app = express();
 
-//midleware
+//Midleware
 app.use(express.static(__dirname + '/public')); // aqui eu determino onde o script deverá procurar os demais arquivos na localhost, que no caso é a pasta raiz, isso é importante para usar arquivos javascript no html.
 console.log(__dirname)
 
