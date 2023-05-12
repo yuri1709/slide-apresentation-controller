@@ -7,8 +7,8 @@ body { /*Quando eu coloco alguma coisa no Body, significa que vou alterar a pág
 
 #principal {
   width: 100%;
-  height: 1000px;
-  background-color: white;
+  height: 400px;
+  background-color: #000346;
   margin: 0px auto;
 }
 
@@ -16,10 +16,12 @@ body { /*Quando eu coloco alguma coisa no Body, significa que vou alterar a pág
   display: flex;
   justify-content: center;
   font-size: 45px;
+  color:#00F0FF
 }
 
 header {
-   
+  display: flex;
+   justify-content: center;
 }
 
 nav {
@@ -28,8 +30,7 @@ nav {
 }
 
 #botao-off-img {
-  margin-top: 20px;
-  margin-left: 90px;
+
 }
 
 #btn-desligar-pc {
@@ -37,27 +38,43 @@ nav {
 }
 
 #meiuca {
-  margin-top: 50px;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 0px
+}
+
+#botoes {
   display: flex;
   flex-direction: row;
   justify-content:space-around;
 }
 
-
 .btn-comando {
   font-size: 50px;
-  width: 100px;
-  padding: 100px;
-  background-color: green;
+  width: 50px;
+  padding: 50px;
+  border: 1px solid #00F0FF;
+  background-color: transparent; 
   text-decoration: none;
-  color: white;
+  color: #00F0FF;
   letter-spacing: 0px;
   font-weight: 900;
   display: flex;
   justify-content: center;
+  border-radius: 40px;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
 }
 
 .btn-comando:hover {
-  background-color: red;
-  color: white;
+  background-color: #00F0FF;
+  color: #000346;
+}
+
+footer {
+padding-top: 100px;
+width: 100%;
+margin: auto;
+bottom: 0;
 }
