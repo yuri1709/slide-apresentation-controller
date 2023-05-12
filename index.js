@@ -1,10 +1,10 @@
 import { exec } from "child_process";
-import localtunnel from './node_modules/localtunnel/localtunnel.js'
+// import localtunnel from './node_modules/localtunnel/localtunnel.js'
 import path from 'path';
 import { keyboard } from "@nut-tree/nut-js";
 import { Key } from "@nut-tree/nut-js/dist/lib/key.enum.js";
 import express from 'express';
-
+import ngrok from 'ngrok';
 
 
 //Configurações globais
@@ -42,10 +42,12 @@ app.get('/desligar', function(req, res) {
 })
 
 
-const tunnel = await localtunnel({port: portValue, subdomain: subdomainValue});
+// const tunnel = await localtunnel({port: portValue, subdomain: subdomainValue});
+const url = await ngrok.connect(portValue);
 
 app.listen(portValue, function() {
-  console.log('App listening on port ',portValue);
-  console.log('App generated url: ',tunnel.url);
+  //console.log('App listening on port ',portValue);
+  // console.log('App generated url: ',tunnel.url);
+  console.log(url)
 })
 
