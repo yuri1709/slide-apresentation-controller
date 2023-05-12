@@ -9,6 +9,7 @@ import express from 'express';
 
 //Configurações globais
 const portValue = 3000;
+var subdomainValue = 'senac';
 const __dirname = path.resolve();
 var app = express();
 
@@ -41,7 +42,7 @@ app.get('/desligar', function(req, res) {
 })
 
 
-const tunnel = await localtunnel({port: portValue, subdomain: 'senac123'});
+const tunnel = await localtunnel({port: portValue, subdomain: subdomainValue});
 
 app.listen(portValue, function() {
   console.log('App listening on port ',portValue);
