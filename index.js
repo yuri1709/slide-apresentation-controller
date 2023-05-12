@@ -1,4 +1,5 @@
 import { exec } from "child_process";
+import localtunnel from './node_modules/localtunnel/localtunnel.js'
 import path from 'path';
 import { keyboard } from "@nut-tree/nut-js";
 import { Key } from "@nut-tree/nut-js/dist/lib/key.enum.js";
@@ -7,7 +8,7 @@ import express from 'express';
 
 
 //Configurações globais
-const port = 3000;
+const portValue = 3000;
 const __dirname = path.resolve();
 var app = express();
 
@@ -34,13 +35,16 @@ app.get('/back', function(req, res) {
 })
 
 app.get('/desligar', function(req, res) {
-  exec("shutdown -s -t 0");
+  exec("shutdown -s -t 60");
   console.log('Desligando o computador');
   res.redirect('..');
 })
 
 
-//SERVER START UP
-app.listen(port, function() {
-  console.log('App listening on port ', 3000);
+const tunnel = await localtunnel({port: portValue, subdomain: 'senac123'});
+
+app.listen(portValue, function() {
+  console.log('App listening on port ',portValue);
+  console.log('App generated url: ',tunnel.url);
 })
+
