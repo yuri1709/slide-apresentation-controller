@@ -1,5 +1,5 @@
 # controle-toshiba
-Node.js application for controll your computer from wherever you want and in this exmample I'm using a smartphone as controller for slide presentation
+Node.js application for controll your computer from wherever you want and in this example I'm using a smartphone as controller for slide presentation
 
 # How to use:
 <li>1- git clone to the folder you want</li>
@@ -10,5 +10,3 @@ Node.js application for controll your computer from wherever you want and in thi
 <li>END- Enjoy now!</li>
 <br/>
 
-#  Note
-<li>Use with moderation</li>
